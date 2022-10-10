@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1>Resultado da pesquisa</h1>
+<br>
+<ul>
+  {% for profile in object_list %}
+    <li>
+     <article class="media">
+  <figure class="media-left">
+    <p>
+      <img src="{{ profile.picture.url }}">
+    </p>
+  </figure>
+  <div class="media-content">
+    <div class="content">
+        <h2>{{ profile.user.first_name }}</h2>
+      <p>
+        {{profile.profile_description}}
+      </p>
+       <p>
+           <a href="{% url 'profile_detail' pk=profile.pk %}">Ver mais detalhes</a>
+       </p>
+    </div>
+
+  </div>
+
+</article>
+
+    </li>
+  {% endfor %}
+</ul>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?uf={{estado}}&cidade={{cidade}}&search={{search}}&page=1">&laquo; primeira</a>
+            <a href="?uf={{estado}}&cidade={{cidade}}&search={{search}}&page={{ page_obj.previous_page_number }}">anterior</a>
+        {% endif %}
+
+        <span class="current">
+            Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?uf={{estado}}&cidade={{cidade}}&search={{search}}&page={{ page_obj.next_page_number }}">próxima</a>
+            <a href="?uf={{estado}}&cidade={{cidade}}&search={{search}}&page={{ page_obj.paginator.num_pages }}">última &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+{%endblock%}
+

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load account socialaccount %}
+
+{% block content%}
+<div class="details">
+    <img src="{{ profile.picture.url }}">
+<h2>{{ profile.user }}</h2>
+<div class="local">
+    <p>{{ profile.city }} - {{ profile.state }}</p>
+    
+</div>
+<p>{{ profile.profile_description }}</p>
+<p>{{ profile.user.email }}</p>
+<h3>Informações para contato</h3>
+<p>E-mail: {{ profile.user.email }}</p>
+<p>Telefone: {{profile.phone_number}}<p>
+
+</div>
+
+
+
+<h2 class="subtitle">Avaliações</h2>
+
+        <div class="reviews-wrapper">
+            {% for review in profile.reviews.all %}
+                <div class="notification space-below">
+                   
+
+                    <h2>{{review.user.username}}</h2>
+                
+                    <p>
+                        <strong>Data: </strong>{{ review.created|date:"d-m-Y" }},
+                        <strong>Estrelas: </strong>{{ review.stars }}
+                    </p>
+
+                    <h3>{{ review.content }}</h3>
+                    <p>{{ review.comment }}</p>
+                </div>
+            {% empty %}
+                <div class="notification space-below">
+                    Sem avaliações...
+                </div>
+            {% endfor %}
+        </div>
+
+{%endblock%}

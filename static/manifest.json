@@ -1,0 +1,15 @@
+{
+    "name": "HelpHome",
+    "short_name": "HelpHome",
+    "theme_color": "#2a0044",
+    "background_color": "#2a0044",
+    "display": "standalone",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "images/icon-64x64.png",
+        "sizes": "64x64",
+        "type": "image/png"
+      }
+    ]
+  }

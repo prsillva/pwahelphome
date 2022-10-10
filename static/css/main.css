@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+:root {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;    
+    color: rgba(41, 41, 41, 0.82);
+}
+
+.container{
+ max-width: 60rem;
+ min-width: 30rem;
+ margin: 0 auto;
+ 
+}
+
+
+.header-container {
+    max-width: 60rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    background-color: rgb(255, 255, 255 );
+    padding: 2rem 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+
+h1{
+   font-size: 3rem;
+   margin: 1.75rem 0 ;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+li{
+    list-style: none;
+}
+
+ul{
+    padding: 0;
+    margin-top: 0px;
+}
+
+form {
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    max-width: 70%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-bottom: 10rem;
+
+}
+
+
+input, select, textarea {
+    background-color: white;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+
+
+button, input[type='submit']{
+    margin-top: 2rem;
+    padding: 1.2rem 5rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    max-width: fit-content;
+    margin-left: auto;
+}
+
+button:hover{
+    background-color: rgb(18, 132, 247);
+}
+
+button:active{
+    background-color: rgb(87, 169, 252);
+}
+
+
+.primaryAction{
+    margin-top: 2rem;
+}
+
+
+form > p {
+    display: flex;
+    flex-direction: column;
+    margin:0;
+}
+
+form > button {
+    justify-content: flex-end;
+} 
+
+.content {
+    margin: 2rem 0;
+}
+
+.auth > p > * {
+    padding: 0 1rem;
+}
+
+.auth > p:last-child {
+    padding-right: 0px;
+}
+
+.remember-me{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+form > p:first-child:nth-last-child(2){
+    display: flex;
+    flex-direction: row;
+}
+
+ul.errorList {
+    color: rgb(207, 29, 29);
+    background-color: rgb(243, 207, 207);
+    padding: .5rem;
+    border-color: rgb(207, 29, 29);
+    border-radius: .5rem;
+}
+
+
+input#id_remember{
+    margin-right: auto;
+}
+
+.media{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.media > img {
+    object-fit: cover;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-right: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+
+.card-body > h2 {
+    margin: 0px;
+}
+
+.card-body > p {
+    font-size: 1.75rem;
+    margin: 0px;
+}
+
+.success{
+    padding: 1rem;
+    color: rgb(2, 170, 2);
+    background-color: rgb(196, 252, 196);
+    border: 1px solid rgb(2, 170, 2);
+    border-radius: .5rem ;
+    margin-bottom: 2rem;
+}
+
+.errorlist {
+    padding: 1rem;
+    color: rgb(218, 17, 10);
+    background-color: rgb(255, 218, 217);
+    border: 1px solid rgb(218, 17, 10);
+    border-radius: .5rem ;
+    margin-bottom: 2rem;
+
+}
+
+li{
+    list-style-position: inside;
+}
+
+
+.helptext{
+    padding: 1rem;
+    color: rgb(0, 113, 165);
+    background-color: rgb(228, 228, 253);
+    border: 1px solid rgb(0, 113, 165);
+    border-radius: .5rem;
+    margin-top: 1rem;
+    margin-bottom: .25rem;
+}
+
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.step-links > a{
+    margin: 0 .25rem;
+}
+.pagination > .step-links > a{
+    margin-top: 2rem;
+    padding: .5rem 1rem ;
+    font-size: 1.2rem;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    max-width: fit-content;
+    margin-left: auto;
+}
+
+.current{
+    margin: 0 1rem;
+    font-size: 1.5rem;
+}
+
+
+.media-left{
+    padding: 0px;
+    margin-left: 1rem;
+   
+}
+
+img {
+    object-fit: cover;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+article.media{
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;    
+}
+
+.media-content{
+    margin-right: 1rem;
+    padding-right: 1rem;
+}
+
+.content > ul > li {
+    margin-bottom: 1rem;
+}
+
+.content > ul {
+    margin-bottom: 2rem;
+    
+}
+
+.content > p > strong{
+    display: block;
+    font-size: 2rem;
+}
+
+.logo{
+    border-radius: 0px;
+    box-shadow: none;
+    object-fit: contain;
+    margin: 0px;
+}
