@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+
+<!-- Default form login -->
+<form class="text-center border border-light p-5" action="#!">
+
+  <p class="h4 mb-4">Acessar</p>
+
+  <!-- Email -->
+  
+  <input type="text" class="form-control" placeholder="Login">
+
+  <!-- Password -->
+  <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+
+  <div class="d-flex justify-content-around">
+      <div>
+          <!-- Remember me -->
+          <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+              <label class="custom-control-label" for="defaultLoginFormRemember">Lembrar</label>
+          </div>
+      </div>
+      <div>
+          <!-- Forgot password -->
+          <a href="">Esqueceu a senha?</a>
+      </div>
+  </div>
+
+  <!-- Sign in button -->
+  <button class="btn btn-info btn-block my-4" type="submit">Login</button>
+
+  <!-- Register -->
+  <p>Não tem cadastro?
+      <a href="">Cadastrar</a>
+  </p>
+
+
+</form>
+<!-- Default form login -->
+
+{% endblock %}

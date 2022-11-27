@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load account socialaccount %}
+
+{% block content %}
+
+<form action="{% url 'search_results' %}" method="get" >
+    <label for="uf">Estado: </label>
+    <select name="uf" id="uf"> 
+        <option value="AC">Estado...</option>          
+    </select>
+    <label for="cidade">Cidade: </label>
+    <select name="cidade" id="cidade">
+        <option value="AC">Cidade...</option>     
+    </select>
+    <label for="search" id="search">Procurar: </label>
+    <input name="search" type="text" placeholder="Procurar...">
+<br>
+    <center><button type="submit">Procurar</button></center>
+
+</form>
+
+{% endblock content%}

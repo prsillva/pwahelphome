@@ -50,8 +50,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'api',
     'pwa',
+    'crispy_forms',
 ]
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
     # https://warehouse.python.org/project/whitenoise/
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -149,7 +150,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js')
+
 
 STATIC_ROOT = "assets/"
 
@@ -157,7 +158,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 PWA_APP_NAME = 'HelpHome'
-PWA_APP_DESCRIPTION = "HelpHome PWA"
+PWA_APP_DESCRIPTION = "HelpHome"
 PWA_APP_THEME_COLOR = '#000000'
 PWA_APP_BACKGROUND_COLOR = '#ffffff'
 PWA_APP_DISPLAY = 'standalone'
@@ -167,14 +168,14 @@ PWA_APP_START_URL = '/'
 PWA_APP_STATUS_BAR_COLOR = 'default'
 PWA_APP_ICONS = [
     {
-        'src': 'static/images/icon-64x64.png',
-        'sizes': '64x64'
+        'src': 'static/images/icon-72x72.png',
+        'sizes': '144x144'
     }
 ]
 PWA_APP_ICONS_APPLE = [
     {
-        'src': 'static/image/icon-64x64.png',
-        'sizes': '64x64'
+        'src': 'static/image/icon-72x72.png',
+        'sizes': '144x144'
     }
 ]
 PWA_APP_SPLASH_SCREEN = [
@@ -184,7 +185,7 @@ PWA_APP_SPLASH_SCREEN = [
     }
 ]
 PWA_APP_DIR = '/'
-PWA_APP_LANG = 'en-US'
+PWA_APP_LANG = 'pt-BR'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -198,4 +199,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Allauth
 SITE_ID = 1
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-LOGIN_URL = '/accounts/login/'
+

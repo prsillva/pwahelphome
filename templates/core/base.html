@@ -1,0 +1,136 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="manifest" href="{% static  'manifest.json' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+    <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+    <link rel="canonical" href="https://codepen.io/cesardanielhg/pen/PoogRXQ">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  </head>
+    <title>{% block title %}{{page_title}}{% endblock %}</title>
+</head>
+
+<body>
+    <style>
+        body{background: #eee}.card{background-color: #fff;width: 280px;border-radius: 28px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)}.image{border-radius: 50%}.welcome{font-size: 9px;position: relative;top: 5px;font-weight: 500;color: #7e7e7e}.name{font-size: 12px;font-weight: 500;color: #282828}.debit{background-color: #000;border-radius: 12px;width: 244px}.black{color: #c5c5c5;font-size: 12px}.star{color: #e4e4e4;font-size: 12px}.number{color: #e4e4e4;font-size: 12px;font-weight: 500}.balance{font-size: 12px;color: #c5c5c5;font-weight: 400;position: relative;top: 38px}.fifty{font-size: 14px;font-weight: 500;color: #fff}.dollar{font-size: 22px;font-weight: 500;color: #fdfdfd}.dot{font-size: 15px;font-weight: 500;color: grey}.transfer{font-size: 13px;font-weight: bold;color: #2c2c2c}.curve{border-radius: 10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);width: 30px;height: 30px;text-align: center}.add{font-size: 16px;font-weight: bold}.model{width: 35px;height: 35px;border-radius: 8px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)}.trans{font-size: 13px;font-weight: bold;color: #2c2c2c}.view{font-size: 10px;font-weight: 500;color: #828282}.flightout{width: 40px;height: 40px;border-radius: 9px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)}.flight{border-radius: 50%;background-color: #fdebd2;width: 25px;height: 25px;text-align: center;align-items: center;justify-content: center}.flighttxt{font-size: 12px;color: #464646;font-weight: 500}.yesterday{font-size: 10px;font-weight: 500;color: #c3c3c3}.minus{font-size: 15px;font-weight: 600;color: #252525}.five{font-size: 11px !important;font-weight: bold;color: #000}.knife{font-size: 16px !important;font-weight: lighter}.scroll{overflow-y: scroll;height: 350px;scroll-behavior: smooth}.scroll::-webkit-scrollbar{display: none;scroll-behavior: smooth}.home{font-size: 12px;font-weight: 500;color: #404040;position: relative;top: 5px}.dot1{font-size: 18px;font-weight: bold;color: red;position: relative;right: 19px;top: 7px}.calender{font-size: 15px !important}.curve2{width: 37px;height: 37px;border-radius: 12px;background-color: #000;color: #fff;text-align: center;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)}.downplus{font-size: 20px;color: #fff;font-weight: bold;position: relative;top: 1px}.dot2{font-size: 19px;font-weight: bold;color: red;position: relative;bottom: 11px;right: 5px}.cog{font-size: 15px !important;position: relative;bottom: 2.5px}
+    </style>
+    <header>
+        
+        <section class="header-container">
+            
+        <div class="logo-area">
+            
+         <a href="{% url 'home' %}" class="title"><img src="{% static 'assets/logo.png'%}" alt="Logotipo" class="logo"></a>
+        </div>
+            <!-- Profile picture card-->
+            <div class="d-flex justify-content-between px-3 align-items-center border-bottom"> <span><i class="fa fa-bars"></i></span>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="pr-2 text-right"> <span class="welcome">Bem vindo(a)</span>
+                        {% if user.is_authenticated %}
+                        <p class="name">{{ request.user }}</p>
+                        <div><img src="{{ user.profile.picture.url}}" width="10" class="image"></div>
+                    </div>
+                    {%else%}
+                    <p class="name">Visitante</p>
+                    
+                    <div> <img src="https://i.imgur.com/AgAC1Is.jpg" width="30" class="image"> </div>
+                    {% endif %}
+                </div>
+            </div>
+   
+</div>
+    </section>
+</header>
+<div>
+<section class="content">
+         {% if messages %}
+        {% for message in messages %}
+<div class="{{ message.tags }} ">
+    {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+  <!-- Bottom Navbar -->
+  <nav class="navbar navbar-dark bg-primary navbar-expand fixed-bottom d-md-none d-lg-none d-xl-none p-0">
+    <ul class="navbar-nav nav-justified w-100">
+        <li class="nav-item">
+            <a href="{% url 'home' %}"  class="nav-link text-center">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                    <path fill-rule="evenodd"
+                        d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                </svg>
+                <span class="small d-block">Home</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link text-center">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                    <path fill-rule="evenodd"
+                        d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                </svg>
+                <span class="small d-block">Procurar</span>
+            </a>
+        </li>
+        <li class="nav-item dropup">
+            <a href="#" class="nav-link text-center" role="button" id="dropdownMenuProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                </svg>
+                <span class="small d-block">Perfil</span>
+            </a>
+            <!-- Dropup menu for profile -->
+            {% if user.is_authenticated %}
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuProfile">
+                <a class="dropdown-item" a href="{% url 'profile'%}">Meu Perfil</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'account_logout' %}">Sair</a>
+                {%else%}
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuProfile">
+                    <a class="dropdown-item" a href="#">Perfil</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{% url 'account_login' %}">Entrar</a>
+                {% endif %}
+            </div>
+        </li>
+    </ul>
+</nav>
+<script>
+    $('.dropdown-toggle').dropdown()
+    </script>
+
+    {% block content %} {% endblock %}
+</section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-7549a40147ccd0ba0a6b5373d87e770e49bb4689f1c2dc30cccc7463f207f997.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-5e03f34e38152f20eb79c96b0b89c2d99c5085e9ae9386dc71e2f0b3c30bf513.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+<script src="{% static 'js/cep.js' %}"></script>
+<script src="{% static 'js/uf_cd.js' %}"></script>
+
+ 
+</body>
+</html>

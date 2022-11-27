@@ -1,0 +1,64 @@
+{% extends 'core/base_pwa.html' %}
+
+{% block content%}
+<br>
+<br>
+<br>
+<br>
+<center>  <h1 class="title">Resultado da Pesquisa</h2></center>
+<div class="section mt-4">
+     <div class="section-heading">
+        
+        
+    </div>
+
+    <div class="transactions">
+        <!-- item -->
+{% for profile in object_list.all %}  
+        <a href="{% url 'profile_detail_pwa' pk=profile.pk %}" class="item">
+            <div class="detail">
+                <img src="{{ profile.picture.url }}" alt="img" class="image-block imaged w48">
+                <div>
+                    <strong>{{ profile.user.first_name }}</strong>
+                    {% for service in profile.services.all %}  
+                    
+                    <p>{{service.name}}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="right">
+               
+                
+                 
+                 
+                <div class="price text-danger"><button type="submit" class="btn btn-primary my-1">Detalhes</button></div>
+                
+                
+            </div>
+        </a>
+{% endfor %}
+  </div> 
+<br>
+
+<div class="pagination">
+    <center>
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?uf={{estado}}&cidade={{cidade}}&search={{search}}&page=1">&laquo;</a>
+            <a href="?uf={{estado}}&cidade={{cidade}}&search={{search}}&page={{ page_obj.previous_page_number }}">anterior</a>
+        {% endif %}
+
+        <span class="current">
+            Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?uf={{estado}}&cidade={{cidade}}&search={{search}}&page={{ page_obj.next_page_number }}">próxima</a>
+            <a href="?uf={{estado}}&cidade={{cidade}}&search={{search}}&page={{ page_obj.paginator.num_pages }}"> &raquo;</a>
+        {% endif %}
+    </span>
+</center>
+</div>
+
+{%endblock%}
+

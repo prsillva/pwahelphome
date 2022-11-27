@@ -78,7 +78,7 @@ class Profile(models.Model):
                                 upload_to='profile_pics')
     birth_date = models.DateField(verbose_name='Data de nascimento', blank=True, null=True)
     gender = models.CharField(max_length=1, choices=GENDER, verbose_name='Gênero', blank=True, null=True)
-    services = models.ManyToManyField(Service, verbose_name='Serviço', blank=True, related_name='profiles')
+    services = models.ManyToManyField(Service, verbose_name='Serviço', blank=True, related_name='profile')
     profile_description = models.TextField(max_length=500, verbose_name='Descrição', blank=True, null=True)
     social_number = models.CharField(max_length=11, verbose_name='CPF', unique=True, blank=True, null=True)
     phone_number = models.CharField(max_length=11, verbose_name='Telephone', blank=True, null=True)
