@@ -1,30 +1,24 @@
-{% extends "core/base_pwa.html" %}
+{% extends "base.html" %}
 {% load account socialaccount %}
-{% load crispy_forms_tags %}
+
 {% block content%}
 
 
+<div class="content-section">
 
-<div class="container border" style="margin-top:100px ;margin-bottom: 100px;">
-    <div class="container form-group col-md-12 mb-0">
-        <center><div class="container" style="align-items:center ;">
+        <div class="media">
             <img src="{{ user.profile.picture.url}}" alt="">
             <div class='card-body'>
-                <h2>{{user.first_name}} {{user.last_name}}</h2>
             <h2>{{user.username}}</h2>
             <p>{{user.email}}</p>
             </div>
         </div>
-    </center>
         <form method="post" action="" enctype="multipart/form-data">
               {% csrf_token %}
-              {{ user_form|crispy }}
-              {{ profile_form|crispy }}
-           <center> <button type="submit" class="btn btn-primary">Atualizar</button></center>
-            <br>
+              {{ user_form }}
+              {{ profile_form }}
+           <center> <button type="submit">Atualizar</button></center>
         </form>
 </div>
-   </div>
-
 
 {% endblock content%}

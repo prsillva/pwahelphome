@@ -18,6 +18,7 @@
     <link rel="canonical" href="https://codepen.io/cesardanielhg/pen/PoogRXQ">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
   </head>
     <title>{% block title %}{{page_title}}{% endblock %}</title>
 </head>
@@ -108,7 +109,7 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuProfile">
                     <a class="dropdown-item" a href="#">Perfil</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{% url 'account_login' %}">Entrar</a>
+                    <a class="dropdown-item" href="{% url 'logar_usuario' %}">Entrar</a>
                 {% endif %}
             </div>
         </li>

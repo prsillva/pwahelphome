@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container border" style="margin-top:100px ;margin-bottom: 100px;">
+    <div class="container form-group col-md-12 mb-0">
+  
+  <center><h1>Login no Sistema</h1></center>
+<form method="post">
+    {% csrf_token %}
+
+    
+        {{form_login.username.errors}}
+        <label>Login: </label>
+        {{form_login.username}}
+    
+
+    
+        {{form_login.password.errors}}
+        <label>Senha: </label>
+        {{form_login.password}}
+    
+
+    <div class="form-group">
+        <center><input type="submit" value="Entrar" class="btn btn-primary"></center>
+    </div>
+</form>
+    </div>
+</div>
+{% endblock content%}
